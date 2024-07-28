@@ -74,9 +74,10 @@ func TestDeleteAccount(t *testing.T) {
 }
 
 func TestListAccount(t *testing.T) {
+	createRandomAccount(t)
 	accounts, err := testQueries.ListAccounts(context.Background(), ListAccountsParams{
-		Limit:  5,
-		Offset: 1,
+		Limit:  1,
+		Offset: 0,
 	})
 
 	require.NoError(t, err)
