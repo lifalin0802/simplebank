@@ -9,3 +9,4 @@ packages:
     emit_prepared_queries: false
     emit_interface: false
     emit_exact_table_names: false # if true, accounts table > Accounts struct
+    emit_empty_slices: true

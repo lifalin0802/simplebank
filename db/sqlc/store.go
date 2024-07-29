@@ -129,8 +129,8 @@ func addMoney(
 	account2 Account,
 	err error) {
 	account1, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
-		ID:     accountID1,
-		Amount: amount1,
+		ID:      accountID1,
+		Balance: amount1,
 	})
 	fmt.Println(account1.ID, "balance : ", account1.Balance)
 	if err != nil {
@@ -138,8 +138,8 @@ func addMoney(
 	}
 
 	account2, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
-		ID:     accountID2,
-		Amount: amount2,
+		ID:      accountID2,
+		Balance: amount2,
 	})
 	fmt.Println(account2.ID, "balance : ", account2.Balance)
 	fmt.Println("2: ", account2.ID)
